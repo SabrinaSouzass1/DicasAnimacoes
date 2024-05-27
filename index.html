@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas de Animação - Sabrina Souza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .example {
+            margin: 20px 0;
+        }
+
+        /* Exemplo de transição */
+        .elemento {
+            transition: all 0.3s ease;
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            margin-bottom: 10px;
+        }
+        .elemento:hover {
+            background-color: #0056b3;
+        }
+
+        /* Exemplo de animação com @keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .animado {
+            animation: fadeIn 1s forwards;
+            opacity: 0;
+        }
+
+        /* Exemplo de animação com hover */
+        .hover-animado {
+            width: 100px;
+            height: 100px;
+            background-color: #28a745;
+            margin-bottom: 10px;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+        .hover-animado:hover {
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        /* Exemplo de animação complexa com @keyframes */
+        @keyframes moveAndFade {
+            0% { transform: translateX(0); opacity: 0; }
+            50% { transform: translateX(100px); opacity: 1; }
+            100% { transform: translateX(0); opacity: 0; }
+        }
+        .complexo {
+            width: 100px;
+            height: 100px;
+            background-color: #ffc107;
+            animation: moveAndFade 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dicas para Criar Animações com CSS, HTML e JS</h1>
+        
+        <h2>1️⃣ Transições CSS Simples</h2>
+        <p>Use transições para adicionar efeitos suaves às suas animações. Exemplo:</p>
+        <div class="example">
+            <code>.elemento { transition: all 0.3s ease; }</code>
+        </div>
+        <p>Ao mudar a propriedade do elemento, ele será animado de forma suave. Experimente passar o mouse sobre o quadrado abaixo:</p>
+        <div class="elemento"></div>
+
+        <h2>2️⃣ Animações com <code>@keyframes</code></h2>
+        <p>Para animações mais complexas, utilize <code>@keyframes</code>. Exemplo:</p>
+        <div class="example">
+            <code>
+                @keyframes fadeIn {<br>
+                &nbsp;&nbsp;0% { opacity: 0; }<br>
+                &nbsp;&nbsp;100% { opacity: 1; }<br>
+                }<br><br>
+                .animado {<br>
+                &nbsp;&nbsp;animation: fadeIn 1s forwards;<br>
+                }
+            </code>
+        </div>
+        <p>Veja o quadrado abaixo aparecer suavemente ao carregar a página:</p>
+        <div class="elemento animado"></div>
+
+        <h2>3️⃣ Animações com Hover</h2>
+        <p>Adicione interatividade com animações de hover. Exemplo:</p>
+        <div class="example">
+            <code>
+                .hover-animado {<br>
+                &nbsp;&nbsp;transition: transform 0.5s ease;<br>
+                }<br><br>
+                .hover-animado:hover {<br>
+                &nbsp;&nbsp;transform: rotate(45deg) scale(1.2);<br>
+                }
+            </code>
+        </div>
+        <p>Experimente passar o mouse sobre o quadrado abaixo:</p>
+        <div class="hover-animado"></div>
+
+        <h2>4️⃣ Animação Complexa com <code>@keyframes</code></h2>
+        <p>Crie animações mais elaboradas usando <code>@keyframes</code>. Exemplo:</p>
+        <div class="example">
+            <code>
+                @keyframes moveAndFade {<br>
+                &nbsp;&nbsp;0% { transform: translateX(0); opacity: 0; }<br>
+                &nbsp;&nbsp;50% { transform: translateX(100px); opacity: 1; }<br>
+                &nbsp;&nbsp;100% { transform: translateX(0); opacity: 0; }<br>
+                }<br><br>
+                .complexo {<br>
+                &nbsp;&nbsp;animation: moveAndFade 3s infinite;<br>
+                }
+            </code>
+        </div>
+        <p>Veja o quadrado abaixo se mover e desaparecer continuamente:</p>
+        <div class="complexo"></div>
+
+        <h2>5️⃣ Bibliotecas e Recursos Online</h2>
+        <p>Aproveite bibliotecas e ferramentas que facilitam a criação de animações:</p>
+        <ul>
+            <li><a href="https://andromedatech.com.br" target="_blank">AndromedaTech</a>: Blog de tecnologia</li>
+            <li><a href="https://getbootstrap.com" target="_blank">Bootstrap</a>: Framework com componentes e animações prontas.</li>
+            <li><a href="https://webcode.tools" target="_blank">Web Code Tools</a>: Ferramentas online para gerar códigos e visualizar animações.</li>
+            <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>: Documentação completa para aprender sobre CSS, HTML e JavaScript.</li>
+        </ul>
+
+        <p>Espero que essas dicas ajudem você a criar animações incríveis! Qualquer dúvida, deixe nos comentários. Até a próxima!</p>
+        <p><strong>Sabrina Souza</strong></p>
+    </div>
+</body>
+</html>
